@@ -1,0 +1,190 @@
+@use 'partial';
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+.postLayout {
+  display: none;
+}
+#post1 {
+  display: block;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: partial.$primary-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  padding: partial.$padding;
+  text-align: left;
+  font-family: partial.$heading-font;
+}
+
+h1 { font-size: 2.3em; }
+h2 { font-size: 1.5em; }
+
+img { max-width: 100%; }
+
+p, a {
+  font-family: partial.$paragraph-font;
+  font-weight: 400;
+}
+p {
+  font-size: small;
+  color: partial.$text-color;
+  margin-bottom: none;
+}
+/*----Navigation----*/
+.navbar{
+      background-color: partial.$nav-color;
+      padding: 2.5px 2.5px;
+      img{
+              width: 1em;
+          }    }
+  
+/*Banner med tre billeder*/
+  
+.banner {
+  padding: 1em;
+  background-color: partial.$primary-color;
+  background-size: cover;
+  display: flex; // Bruger flexbox til at arrangere billederne
+  justify-content: space-between; // Skaber plads imellem billederne
+  align-items: center; // Centrér billederne vertikalt
+  overflow: hidden;   
+  
+.banner-item {
+  flex: 1; // Gør hver banner-item lige bred
+  margin: 0 10px; // Giv lidt mellemrum mellem billederne
+  width: 100%;
+  height: auto; }
+  
+.banner-item img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
+  
+.banner-item img:hover {
+    transform: scale(1.2);
+  }
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: partial.$hoover-color;
+  justify-content: center;
+  align-items: center;
+}
+.lightbox.show {
+  display: flex;
+}
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #000;
+}
+.lightbox-close {
+  position: absolute;
+  top: 15px; right: 25px;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 10001;
+  user-select: none;
+}
+#previous-result-container {
+  background-color: partial.$nav-color;
+  border-radius: 10px;
+  border: 0.7px solid #e9e9eb;
+  box-shadow: 0px 1px 5px #d6d6d6;
+  padding: 1.5em;
+  margin: 20px auto;
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+#previous-result {
+  font-family: partial.$paragraph-font;
+  color: partial.$text-color;
+  font-size: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  padding: 1.5em;
+  }
+}
+.about-container {
+  background-color: partial.$nav-color;
+  border-radius: 10px;
+  border: 0.7px solid #e9e9eb;
+  box-shadow: 0px 1px 5px #d6d6d6; 
+  padding: 15px;
+  margin: 10px auto;
+  max-width: 95%;
+} 
+.about-text {
+    font-family: partial.$paragraph-font;
+    color: partial.$text-color;
+    font-size: 1em;
+    margin-bottom: 1em;
+    padding: 1.5em;
+    }
+#img-portraet
+{
+  width: 75vw;
+  display: block; //Vi er nødt til at bruge display block på img, da img er et inline element. Block gør det muligt for os at centrere billedt ved brug af margin: 0 auto
+  margin: 0 auto;
+  padding-top: 1.5em;
+  padding-bottom: none; 
+}
+
+.save-result-btn {
+  @include partial.mainBtn;
+}
+.postLayout {
+    background-color: partial.$nav-color;
+    border-radius: 10px;
+    border: 0.7px solid #e9e9eb;
+    box-shadow: 0px 1px 5px #d6d6d6; 
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 95%;
+}
+.postContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  padding: 1em;
+  }
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: -40px;
+    .avatar {
+      width: 2em;
+    }
+    .prikmm {
+      width: 2em;
+      margin-left: auto;
+    }
+  }
+.post-text {
+    font-size: small;
+    color: partial.$text-color;
+    margin-bottom: none;
+  } 
+.center-btn { display: flex; justify-content: center; }
+.main-btn {
+@include partial.mainBtn; }
+
+.button-group {
+@include partial.buttonGroup; }
+
+.restart-btn {
+@include partial.mainBtn; }
+
