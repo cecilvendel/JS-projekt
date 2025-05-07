@@ -1,0 +1,35 @@
+/*Variabler*/
+$primary-color: #F2F4F7;
+$nav-color: hwb(0 100% 0%);
+$hoover-color: #c9cbcf;
+$text-color: #1D1F23;
+$padding: 1em;
+$heading-font: 'Raleway', sans-serif;
+$paragraph-font: 'Open Sans', sans-serif;
+$img-date: url(img/date.png);
+
+/*Mixin*/
+@mixin mainBtn {
+    background-color: $primary-color;
+    color: rgb(0, 0, 0);
+    padding: 1em;
+    font-family: $paragraph-font;
+    font-size: xx-small;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+    &:hover {
+      background-color: $hoover-color;
+      color: $text-color;
+    }
+  }
+  @mixin buttonGroup {
+    display: flex;
+    gap: 1em;
+  }
+
+  
+
+  

@@ -1,0 +1,261 @@
+/*Variabler*/
+/*Mixin*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.postLayout {
+  display: none;
+}
+
+#post1 {
+  display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #F2F4F7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  padding: 1em;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  font-size: 2.3em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+img {
+  max-width: 100%;
+}
+
+p, a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-size: small;
+  color: #1D1F23;
+  margin-bottom: none;
+}
+
+/*----Navigation----*/
+.navbar {
+  background-color: hwb(0 100% 0%);
+  padding: 2.5px 2.5px;
+}
+.navbar img {
+  width: 1em;
+}
+
+/*Banner med tre billeder*/
+.banner {
+  padding: 1em;
+  background-color: #F2F4F7;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.banner .banner-item {
+  flex: 1;
+  margin: 0 10px;
+  width: 100%;
+  height: auto;
+}
+.banner .banner-item img {
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+.banner .banner-item img:hover {
+  transform: scale(1.2);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #c9cbcf;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.show {
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #000;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 10001;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+#previous-result-container {
+  background-color: hwb(0 100% 0%);
+  border-radius: 10px;
+  border: 0.7px solid #e9e9eb;
+  box-shadow: 0px 1px 5px #d6d6d6;
+  padding: 1.5em;
+  margin: 20px auto;
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#previous-result-container #previous-result {
+  font-family: "Open Sans", sans-serif;
+  color: #1D1F23;
+  font-size: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  padding: 1.5em;
+}
+
+.about-container {
+  background-color: hwb(0 100% 0%);
+  border-radius: 10px;
+  border: 0.7px solid #e9e9eb;
+  box-shadow: 0px 1px 5px #d6d6d6;
+  padding: 15px;
+  margin: 10px auto;
+  max-width: 95%;
+}
+
+.about-text {
+  font-family: "Open Sans", sans-serif;
+  color: #1D1F23;
+  font-size: 1em;
+  margin-bottom: 1em;
+  padding: 1.5em;
+}
+
+#img-portraet {
+  width: 75vw;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1.5em;
+  padding-bottom: none;
+}
+
+.save-result-btn {
+  background-color: #F2F4F7;
+  color: rgb(0, 0, 0);
+  padding: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-size: xx-small;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.save-result-btn:hover {
+  background-color: #c9cbcf;
+  color: #1D1F23;
+}
+
+.postLayout {
+  background-color: hwb(0 100% 0%);
+  border-radius: 10px;
+  border: 0.7px solid #e9e9eb;
+  box-shadow: 0px 1px 5px #d6d6d6;
+  padding: 15px;
+  margin: 10px auto;
+  max-width: 95%;
+}
+
+.postContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  padding: 1em;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: -40px;
+}
+.post-header .avatar {
+  width: 2em;
+}
+.post-header .prikmm {
+  width: 2em;
+  margin-left: auto;
+}
+
+.post-text {
+  font-size: small;
+  color: #1D1F23;
+  margin-bottom: none;
+}
+
+.center-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.main-btn {
+  background-color: #F2F4F7;
+  color: rgb(0, 0, 0);
+  padding: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-size: xx-small;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.main-btn:hover {
+  background-color: #c9cbcf;
+  color: #1D1F23;
+}
+
+.button-group {
+  display: flex;
+  gap: 1em;
+}
+
+.restart-btn {
+  background-color: #F2F4F7;
+  color: rgb(0, 0, 0);
+  padding: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-size: xx-small;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.restart-btn:hover {
+  background-color: #c9cbcf;
+  color: #1D1F23;
+}/*# sourceMappingURL=style.css.map */
