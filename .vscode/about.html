@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--viewport er nødvendig for at kunne vise siden korrekt på mobile enheder, den hjælper med at skalere indholdet-->
+    <title>About FB</title>
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--Javascript-->
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html"
+          ><img
+            class="logo"
+            src="img/følgernes børn.png1.png"
+            alt="Logo: Følgernes Børn"
+        /></a>
+        <a href="about.html"
+          ><img
+            class="about-icon"
+            src="img/i con.png"
+            alt="icon som fører dig til en infoside om projektet"
+        /></a>
+      </nav>
+    </header>
+    <div class="banner">
+      <div class="banner-item">
+        <img
+          src="img/Parenting 2.png"
+          alt="infographic om hvad data er"
+          class="banner-img"
+          data-full="img/Parenting 2.png"
+        />
+      </div>
+      <div class="banner-item">
+        <iframe
+          class="banner-img"
+          src="https://www.thinglink.com/view/scene/1975325320215004004"
+          type="text/html"
+          style="border: none"
+          webkitallowfullscreen
+          mozallowfullscreen
+          allowfullscreen
+          scrolling="no"
+          title="Interaktivt billede om sharenting"
+        >
+        </iframe>
+        <script async src="//cdn.thinglink.me/jse/responsive.js"></script>
+      </div>
+      <div class="banner-item">
+        <img
+          src="img/Sharenting infographic.png"
+          alt="Sharenting infographic"
+          class="banner-img"
+          data-full="img/Sharenting infographic.png"
+        />
+      </div>
+    </div>
+    <main>
+      <div class="about-container">
+        <div class="insert-post-header"></div>
+        <div class="about-text">
+          <p>
+            Følgernes Børn er et digitalt projekt, der sætter fokus på forældres
+            deling af billeder og historier om deres børn på sociale medier –
+            også kaldet sharenting.
+          </p>
+          <p>Målet med projektet er at skabe refleksion og debat:</p>
+          <p>Hvad betyder det for børnene, når vi deler deres liv online?</p>
+          <p>
+            Hvornår er det kærlig dokumentation – og hvornår bliver det en
+            krænkelse af privatlivet?
+          </p>
+          <p>
+            Projektet inviterer dig til at tage stilling gennem interaktive valg
+            og små fortællinger fra hverdagen. Til sidst får du et indblik i,
+            hvilken type "deler" du er – og hvad du måske kunne tænke over næste
+            gang, du trykker "upload"
+          </p>
+        </div>
+      </div>
+      <div class="about-container">
+        <div class="insert-post-header"></div>
+        <img
+          src="img/portraet.jpg"
+          id="img-portraet"
+          alt="Et billede af mig, Cecilie som har lavet dette projekt."
+        />
+        <div class="about-text">
+          <p>
+            Projektet er udarbejdet af mig, Cecilie – multimediestuderende og
+            mor til to drenge.
+          </p>
+
+          <p>
+            Da jeg blev mor første gang, lagde jeg under en uge efter fødslen et
+            billede op af min søn på sociale medier. Opslaget indeholdt blandt
+            andet hans fulde navn og fødselsdato.
+          </p>
+
+          <p>
+            I løbet af de sidste par år er det gået op for mig, at jeg ikke har
+            kontrol over, hvem der ser det billede – eller hvem der "ejer" den
+            information. Måske er det harmløst, men hvis jeg var blevet ved,
+            kunne kriminelle i teorien sammensætte en hel roman om mit barn
+            baseret på oplysninger, jeg selv har lagt ud.
+          </p>
+
+          <p>
+            Arbejdsgivere, venner og måske mobbere kunne også finde og bruge den
+            information. Det behov vil jeg ikke tage del i. Så nu har jeg taget
+            stilling – har du?
+          </p>
+          <div class="button-group">
+            <a class="restart-btn" href="index.html">Gå til startsiden</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <template id="post-header-template">
+      <div class="post-header">
+        <img
+          src="img/følgernes børn.png1.png"
+          alt="Profilbillede"
+          class="avatar"
+        />
+        <h3 class="post-heading">Følgernes børn</h3>
+        <img src="img/prikmm.png" alt="Mere ikon" class="prikmm" />
+      </div>
+    </template>
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close" id="lightbox-close">&times;</span>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="Stort billede" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="da">
+  <!--lang bruges til at definere sproget på siden, så skærmlæsere kan læse teksten op-->
+  <head>
+    <meta charset="UTF-8" />
+    <!--charset utf-8 er nødvendig for at kunne vise danske bogstaver korrekt-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--viewport er nødvendig for at kunne vise siden korrekt på mobile enheder, den hjælper med at skalere indholdet-->
+    <title>Projekt FB</title>
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Javascript-->
+    <script src="js/script.js" defer></script>
+    <script async src="//cdn.thinglink.me/jse/responsive.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html"
+          ><img
+            class="logo"
+            src="img/følgernes børn.png1.png"
+            alt="Logo: Følgernes Børn"
+        /></a>
+        <a href="about.html"
+          ><img
+            class="about-icon"
+            src="img/i con.png"
+            alt="icon som fører dig til en infoside om projektet"
+        /></a>
+      </nav>
+    </header>
+    <div class="banner">
+      <div class="banner-item">
+        <img
+          src="img/Parenting 2.png"
+          alt="infographic om hvad data er"
+          class="banner-img"
+          data-full="img/Parenting 2.png"
+        />
+      </div>
+      <div class="banner-item">
+        <iframe
+          src="https://www.thinglink.com/view/scene/1975325320215004004"
+          type="text/html"
+          style="border: none"
+          webkitallowfullscreen
+          mozallowfullscreen
+          allowfullscreen
+          scrolling="no"
+          title="Interaktivt billede om sharenting"
+        >
+        </iframe>
+      </div>
+      <div class="banner-item">
+        <img
+          src="img/Sharenting infographic.png"
+          alt="Sharenting infographic"
+          class="banner-img"
+          data-full="img/Sharenting infographic.png"
+        />
+      </div>
+    </div>
+
+    <main>
+      <div id="quiz-container">
+        <section class="postLayout" id="post1">
+          <div class="postContent">
+            <div class="insert-post-header"></div>
+            <p class="post-text">
+              Tænker du over, hvad du deler om dine børn på sociale medier?
+              Ville du dele de følgende opslag hvis de handlede om dine egne
+              børn?
+            </p>
+            <p>
+              Reager på opslagene med det udsagn, der passer bedst på dig, og få
+              et hint om, hvilken slags forælder du er, når det kommer til
+              sharenting.
+            </p>
+            <div class="button-group">
+              <button class="main-btn" id="no-btn">
+                Jeg deler intet om mine børn på sociale medier
+              </button>
+              <button class="main-btn" id="some-btn">
+                Jeg deler af og til mine børn på sociale medier
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="postLayout" id="post2">
+          <div class="postContent">
+            <div class="insert-post-header"></div>
+            <div class="post-image">
+              <img
+                src="img/pige ved strand.png"
+                alt="Pige i bikini leger på stranden"
+              />
+            </div>
+            <p class="post-text">
+              Vi har haft sådan en dejlig dag på stranden, med solbadning,
+              sandslotte og kvalitetstid.
+            </p>
+            <div class="button-group">
+              <button class="main-btn" id="c1">
+                <i class="fas fa-thumbs-up"></i> Jeg ville dele
+              </button>
+              <button class="main-btn" id="c2">
+                <i class="fas fa-thumbs-down"></i> Jeg ville ikke dele
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="postLayout" id="post3">
+          <div class="postContent">
+            <div class="insert-post-header"></div>
+            <div class="post-image">
+              <img src="img/drenggræder.png" alt="Dreng græder" />
+            </div>
+            <p class="post-text">
+              Det kan være enormt opslidende at være forældre til et viljestærkt
+              barn. Som aldrig sidder stille, eller tier stille. Det er sårbart,
+              men når vi deler disse oplevelser, så føler man sig ikke helt så
+              alene.
+            </p>
+            <div class="button-group">
+              <button class="main-btn" id="c3">
+                <i class="fas fa-thumbs-up"></i> Jeg ville dele
+              </button>
+              <button class="main-btn" id="c4">
+                <i class="fas fa-thumbs-down"></i> Jeg ville ikke dele
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="postLayout" id="post4">
+          <div class="postContent">
+            <div class="insert-post-header"></div>
+            <div class="post-image">
+              <img src="img/nyfødt.png" alt="Barn danser ved juletræ" />
+            </div>
+            <p class="post-text">
+              Velkommen til verden, lille Noah Emil Nygaard Pedersen. Født den
+              7. februar 2025. 3540 gram og 52 cm kærlighed. Vi føler os så
+              heldige og trætte og meget, meget forelskede.
+            </p>
+            <div class="button-group">
+              <button class="main-btn" id="c5">
+                <i class="fas fa-thumbs-up"></i> Jeg ville dele
+              </button>
+              <button class="main-btn" id="c6">
+                <i class="fas fa-thumbs-down"></i> Jeg ville ikke dele
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="postLayout" id="Noshare">
+          <div class="postContent">
+            <div class="insert-post-header"></div>
+            <p class="post-text">
+              Respekt for dine valg! Du har valgt ikke at dele noget om dine
+              børn online – og det kræver omtanke og bevidsthed i en digital
+              verden, der konstant inviterer os til at dele.<br /><br />
+              Det betyder ikke, at du ikke er stolt eller elsker dine børn
+              mindre. Tværtimod viser det, at du har taget stilling til deres
+              digitale privatliv.<br /><br />
+              Men vidste du, at mange forældre deler uden helt at tænke over
+              konsekvenserne?
+            </p>
+            <div class="center-btn">
+              <button class="main-btn retry-btn">Prøv igen</button>
+            </div>
+          </div>
+        </section>
+        <section class="postLayout" id="Sharenting" style="display: none">
+          <div class="postContent">
+            <div class="insert-post-header"></div>
+            <h2>Åben deler</h2>
+            <p>
+              Din score viser, at du deler forholdsvist frit – måske uden altid
+              at tænke over konsekvenserne. Du har ikke svært ved at dele
+              stolthed og øjeblikke, og det er forståeligt. Men det, du deler i
+              kærlighed i dag, kan få betydning for dit barns privatliv i
+              fremtiden. Måske er det en god anledning til at spørge dig selv:
+              Ville mit barn være okay med, at dette ligger online om 5 eller 10
+              år?
+            </p>
+            <div class="button-group">
+              <button class="restart-btn">Prøv igen</button>
+              <button class="main-btn save-result-btn">Gem mit resultat</button>
+              <button class="main-btn show-answers-btn">
+                Svar specifikationer
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="postLayout" id="betænksom" style="display: none">
+          <div class="postContent">
+            <div class="insert-post-header"></div>
+            <h2>Intuitiv deler</h2>
+            <p>
+              Din score viser, at du balancerer spontan deling med omtanke. Du
+              balancerer deling og hensyn. Du deler, men du stopper også op og
+              mærker efter. Du er bevidst om barnets perspektiv – også selvom du
+              ikke altid gør alt "perfekt". Det er tydeligt, at du prøver at
+              navigere med både hjerte og fornuft, og det er en vigtig evne i en
+              digital verden.
+            </p>
+            <div class="button-group">
+              <button class="restart-btn">Prøv igen</button>
+              <button class="main-btn save-result-btn">Gem mit resultat</button>
+              <button class="main-btn show-answers-btn">
+                Svar specifikationer
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Tidligere resultat -->
+      <div id="previous-result-container" style="display: none">
+        <div id="previous-result"></div>
+        <div class="center-btn">
+          <button class="main-btn retry-btn">Prøv igen</button>
+        </div>
+      </div>
+    </main>
+
+    <section class="postLayout" id="answers-popup" style="display: none">
+      <div class="postContent" id="answers-popup-content">
+        <h3>Dine svar</h3>
+        <div id="answers-list"></div>
+        <div style="text-align: right">
+          <button class="main-btn" id="close-answers-popup">Luk</button>
+        </div>
+      </div>
+    </section>
+
+    <template id="post-header-template">
+      <div class="post-header">
+        <img
+          src="img/følgernes børn.png1.png"
+          alt="Profilbillede"
+          class="avatar"
+        />
+        <h3 class="post-heading">Følgernes børn</h3>
+        <img src="img/prikmm.png" alt="Mere ikon" class="prikmm" />
+      </div>
+    </template>
+
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close" id="lightbox-close">&times;</span>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="Stort billede" />
+    </div>
+  </body>
+</html>

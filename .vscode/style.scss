@@ -1,0 +1,397 @@
+@use "partial";
+
+// Box sizing grundlæggende
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Grundlæggende layout
+body {
+  margin: 0;
+  padding: 0;
+  background-color: partial.$primary-color;
+  box-sizing: border-box;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  text-align: left;
+  font-family: partial.$heading-font;
+}
+
+h1 {
+  font-size: 2.3em;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+  padding-bottom: none;
+}
+
+// Tekst
+p,
+a {
+  font-family: partial.$paragraph-font;
+  font-weight: 400;
+}
+
+p {
+  font-size: small;
+  color: partial.$text-color;
+  margin-bottom: 1.5em;
+}
+
+// Billeder
+img {
+  max-width: 100%;
+}
+
+// Navbar
+.navbar {
+  background-color: partial.$nav-color;
+  padding: 3px 3px;
+  img {
+    width: 1.5em;
+  }
+}
+
+// Banner med tre billeder
+.banner {
+  padding: 1em;
+  background-color: partial.$primary-color;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+
+  .banner-item {
+    flex: 1;
+    margin: 0 10px;
+    max-width: 600px;
+
+    iframe {
+      max-width: 400px; // Sikrer at billedet ikke flyder ud over containeren
+      height: 300px;
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.3s ease;
+      cursor: zoom-in;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    img {
+      max-width: 400px; // Sikrer at billedet ikke flyder ud over containeren
+      height: 300px;
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.3s ease;
+      cursor: zoom-in;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .banner {
+      flex-direction: column;
+      align-items: center;
+      padding: 0.5em;
+
+      .banner-item:not(:last-child) {
+        display: none;
+      }
+
+      .banner-item {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .banner-item img {
+        max-width: 90vw;
+      }
+    }
+  }
+
+  // Tablet (600px til 1024px)
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .banner {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+
+      .banner-item {
+        max-width: 300px;
+        margin: 0 10px;
+        flex: 1 1 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .banner-item img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+// Lightbox
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: partial.$hover-color;
+  justify-content: center;
+  align-items: center;
+
+  &.show {
+    display: flex;
+  }
+
+  .lightbox-img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 10001;
+    user-select: none;
+  }
+}
+
+// Resultatboks
+#previous-result-container {
+  max-width: 750px;
+  width: 95%;
+  margin: 40px auto;
+  padding: 10px 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); // skygge
+
+  @media (min-width: 800px) {
+    max-width: 700px;
+  }
+
+  #previous-result {
+    font-family: partial.$paragraph-font;
+    color: partial.$text-color;
+    text-align: center;
+    padding: 1.5em;
+  }
+}
+// Quiz layout
+// Post content
+.postLayout {
+  max-width: 750px;
+  width: 95%;
+  margin: 40px auto;
+  padding: 10px 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); // Let skygge
+
+  @media (min-width: 800px) {
+    max-width: 700px;
+  }
+}
+
+.postContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: none;
+
+  .avatar {
+    width: 2em;
+  }
+
+  .prikmm {
+    width: 2em;
+    margin-left: auto;
+  }
+}
+
+.post-image img {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin: 0.5em auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  border-radius: 10px; // bløde hjørner
+}
+
+#post1 {
+  display: block;
+}
+#answers-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+  #answers-popup-content {
+    background: #fff;
+    padding: 20px 24px 24px 24px;
+    border-radius: 12px;
+    max-width: 90vw;
+    position: relative;
+    font-family: partial.$paragraph-font;
+    animation: popupIn 0.2s;
+  }
+
+  #close-answers-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.5em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #444;
+    transition: color 0.15s;
+
+    &:hover {
+      color: #c00;
+    }
+  }
+
+  h3 {
+    text-align: center;
+    margin: 0 0 18px 0;
+    font-size: 2em;
+    color: #333;
+  }
+
+  #answers-list ul {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #answers-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1em;
+
+    strong,
+    b {
+      color: #2b2b2b;
+      margin-right: 6px;
+    }
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .svar-thumb {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+  }
+}
+
+// Popup animation
+@keyframes popupIn {
+  from {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// Om-sektion
+.about-container {
+  background-color: partial.$nav-color;
+  border-radius: 10px;
+  border: 0.7px solid #e9e9eb;
+  box-shadow: 0px 1px 5px #d6d6d6;
+  padding: 15px;
+  margin: 10px auto;
+  max-width: 95%;
+}
+
+.about-text {
+  font-family: partial.$paragraph-font;
+  color: partial.$text-color;
+  font-size: 1em;
+  margin-bottom: 1em;
+  padding: partial.$padding;
+}
+
+// Portræt-billede på about siden
+#img-portraet {
+  width: 75vw;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1.5em;
+  padding-bottom: 0;
+}
+
+// Knapper og grupper
+.save-result-btn,
+.main-btn,
+.restart-btn {
+  @include partial.mainBtn;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+
+  @media (max-width: 600px) {
+    flex-direction: column; /* Skift til kolonne-layout på mobil */
+    align-items: center; /* Centrer knapperne vertikalt */
+    gap: 0.6em; /* Tilføj lidt mindre plads imellem knapperne på mobil */
+  }
+}
+
+.center-btn {
+  display: flex;
+  justify-content: center;
+}

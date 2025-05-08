@@ -1,0 +1,32 @@
+/*Variabler*/
+$primary-color: #f2f4f7;
+$nav-color: #fff;
+$hover-color: #c9cbcf;
+$text-color: #1d1f23;
+$padding: 1em;
+$heading-font: "Raleway", sans-serif;
+$paragraph-font: "Open Sans", sans-serif;
+$img-date: url(img/date.png);
+
+/*Mixin*/
+@mixin mainBtn {
+  background-color: $primary-color;
+  color: rgb(0, 0, 0);
+  padding: $padding;
+  font-family: $paragraph-font;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $hover-color;
+    color: $text-color;
+  }
+}
+@mixin buttonGroup {
+  display: flex; /* Brug flexbox for at arrangere knapperne */
+  justify-content: center; /* Centrer knapperne horisontalt */
+  gap: 1em; /* Tilføj plads imellem knapperne */
+}
